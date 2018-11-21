@@ -1,0 +1,186 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<style>
+
+h1 {font-family: 'Noto Sans', sans-serif;
+	border-radius: 5px;
+	width:20%;
+    background-color: #00223b;
+    padding: 20px;
+    color:white;
+}
+
+option{font-family: 'Open Sans', sans-serif;
+		font-size:20px;}
+
+button {
+    width: 100%;
+    font-size:20px;
+    background-color:#007ea4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8f9199;
+    ;
+}
+
+div {width:20%;
+    border-radius: 5px;
+    background-color: #00223b;
+    padding: 20px;
+}
+
+label{
+	font-size:20px;
+	color:white;
+	font-family: 'Open Sans', sans-serif;
+	  }
+
+
+h1, {font-family: 'Noto Sans', sans-serif;
+	border-radius: 5px;
+    background-color: #00223b;
+    padding: 20px;
+    color:white;
+}
+
+p {	font-size:25px;
+	color:white;
+	font-family: 'Open Sans', sans-serif;}
+
+#list1 {font-size:20px;
+	width:100%;
+	color:black;
+	font-family: 'Open Sans', sans-serif}
+
+#list2 {font-size:20px;
+	width:100%;
+	color:black;
+	font-family: 'Open Sans', sans-serif}
+
+#list3 {font-size:20px;
+	width:100%;
+	color:black;
+	font-family: 'Open Sans', sans-serif
+
+
+
+}
+
+</style>
+
+
+<body>
+
+<h1> Buyers Guide</h1>
+
+
+<div>
+     <select id="list1">
+      <option>Choose Thickness...</option>
+	<option value="≤ 0.40 mm"> ≤ 0.40 mm </option>
+	<option value="0.40 mm"> 0.40 mm </option>
+	<option value="0.45 mm">0.45 mm </option>
+	<option value="0.50 mm"> 0.50 mm </option>
+	<option value="0.60 mm"> 0.60 mm </option>
+	<option value="0.65 mm">0.65 mm </option>
+	<option value="0.70 mm"> 0.70 mm </option>
+	<option value="≥ 0.70 mm"> ≥ 0.70 mm </option>
+    </select>
+<br>
+<br>
+   <select id="list2">
+      <option>Choose Energy Level ... </option>
+	<option value="1 J/mm2"> 1 J/mm2</option>
+	<option value="2 J/mm2"> 2 J/mm2 </option>
+	<option value="3 J/mm2">3 J/mm2 </option>
+	<option value="4 J/mm2"> 4 J/mm2 </option>
+	<option value="5 J/mm2"> 5 J/mm2 </option>
+	<option value="6 J/mm2">6 J/mm2</option>
+    </select>
+<br>
+<br>
+    <select id="list3">
+    <option>Choose Oil Type...</option>
+	<option value="ZF ECOFLUID M"> ZF ECOFLUID M </option>
+	<option value="75W-85"> 75W-85 </option>
+	<option value="75W-90"> 75W-90 </option>
+	<option value="80W-90"> 80W-90</option>
+	<option value="85W-140"> 85W-140 </option>
+	<option value="FFL-4"> FFL-4 </option>
+    </select>
+ <br>
+ <br>
+    <button onclick="getSelectValue()">Get Value</button>
+
+   <p> The Best Material For You Is: <p id="best"></p>
+
+   <script>
+    
+    function getSelectValue()
+
+    {
+    		var selectedValue0 = document.getElementById("best");
+    		var selectedValue1= document.getElementById("list1").value;
+    		var selectedValue2 = document.getElementById("list2").value;
+    		var selectedValue3 = document.getElementById("list3").value;
+    		var result = selectedValue1 + selectedValue2 + selectedValue3;
+
+    	if (result == "0.40 mm1 J/mm2ZF ECOFLUID M" ||result == "0.45 mm1 J/mm2ZF ECOFLUID M" || result == "0.50 mm1 J/mm2ZF ECOFLUID M" ||result == "0.40 mm2 J/mm2ZF ECOFLUID M" ||result == "0.45 mm2 J/mm2ZF ECOFLUID M" || result == "0.50 mm2 J/mm2ZF ECOFLUID M"  ) {
+    		selectedValue0.innerHTML = "AvCarb 1000";
+    	}
+
+    	else if (result == "0.60 mm1 J/mm2ZF ECOFLUID M" || result == "0.65 mm1 J/mm2ZF ECOFLUID M" || result == "0.70 mm1 J/mm2ZF ECOFLUID M" || result == "0.60 mm2 J/mm2ZF ECOFLUID M" || result == "0.65 mm2 J/mm2ZF ECOFLUID M" || result == "0.70 mm2 J/mm2ZF ECOFLUID M" ) {
+    		selectedValue0.innerHTML = "AvCarb 1059";
+    	}
+
+    	else if (result == "0.40 mm3 J/mm2ZF ECOFLUID M" || result == "0.45 mm3 J/mm2ZF ECOFLUID M" || result == "0.50 mm3 J/mm2ZF ECOFLUID M") {
+    		selectedValue0.innerHTML = "AvCarb 1057";
+    	}
+
+    	else if (result == "0.40 mm3 J/mm2ZF ECOFLUID M" || result == "0.45 mm3 J/mm2ZF ECOFLUID M" || result == "0.50 mm3 J/mm2ZF ECOFLUID M") {
+    		selectedValue0.innerHTML = "AvCarb 1057";
+    	}
+
+
+    	else if (result == "0.40 mm3 J/mm2ZF ECOFLUID M" || result == "0.45 mm3 J/mm2ZF ECOFLUID M" || result == "0.50 mm3 J/mm2ZF ECOFLUID M") {
+    		selectedValue0.innerHTML = "AvCarb 1057";
+    	}
+
+    	else if (result == "0.40 mm3 J/mm2ZF ECOFLUID M" || result == "0.45 mm3 J/mm2ZF ECOFLUID M" || result == "0.50 mm3 J/mm2ZF ECOFLUID M" || result == "0.40 mm4 J/mm2ZF ECOFLUID M" || result == "0.45 mm4 J/mm2ZF ECOFLUID M" || result == "0.50 mm4 J/mm2ZF ECOFLUID M") {
+    		selectedValue0.innerHTML = "AvCarb 1057";
+    	}
+
+    	else if (result == "0.60 mm3 J/mm2ZF ECOFLUID M" || result == "0.65 mm3 J/mm2ZF ECOFLUID M" || result == "0.70 mm3 J/mm2ZF ECOFLUID M" || result == "0.60 mm4 J/mm2ZF ECOFLUID M" || result == "0.65 mm4 J/mm2ZF ECOFLUID M" || result == "0.70 mm4 J/mm2ZF ECOFLUID M") {
+    		selectedValue0.innerHTML = "AvCarb 1111";
+    	}
+
+    	else if (result == "0.60 mm5 J/mm2ZF ECOFLUID M" || result == "0.65 mm5 J/mm2ZF ECOFLUID M" || result == "0.70 mm5 J/mm2ZF ECOFLUID M" || result == "0.60 mm6 J/mm2ZF ECOFLUID M" || result == "0.65 mm6 J/mm2ZF ECOFLUID M" || result == "0.70 mm6 J/mm2ZF ECOFLUID M"){
+    		selectedValue0.innerHTML = "AvCarb 1121";
+    	}
+
+    	else {selectedValue0.innerHTML = "Contact Avcarb"}
+
+    }
+   
+   </script>
+
+   </body>
+</html>
